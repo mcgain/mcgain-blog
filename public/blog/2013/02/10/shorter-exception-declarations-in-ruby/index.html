@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Ruminations and Ramblings</title>
+  <title>Shorter exception declarations in Ruby - Ruminations and Ramblings</title>
   <meta name="author" content="Richard McGain">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://richardmcgain.com/">
+  <link rel="canonical" href="http://richardmcgain.com/blog/2013/02/10/shorter-exception-declarations-in-ruby/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -62,15 +62,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/02/10/shorter-exception-declarations-in-ruby/">Shorter Exception Declarations in Ruby</a></h1>
+      <h1 class="entry-title">Shorter Exception Declarations in Ruby</h1>
     
     
       <p class="meta">
@@ -93,31 +90,59 @@
   </header>
 
 
-  <div class="entry-content"><p><a href="http://steveklabnik.com/">Steve Klabnik</a> recently wrote a <a href="http://blog.steveklabnik.com/posts/2012-09-09-random-ruby-tricks--class-new">post</a> on Class.new, especially as it relates to a terser syntax for declaring Exception classes.</p>
+<div class="entry-content"><p><a href="http://steveklabnik.com/">Steve Klabnik</a> recently wrote a <a href="http://blog.steveklabnik.com/posts/2012-09-09-random-ruby-tricks--class-new">post</a> on Class.new, especially as it relates to a terser syntax for declaring Exception classes.</p>
 
 <p>I use an even terser, albeit more magical syntax.</p>
 
+<!-- more -->
+
+
+<p>This is a bit of code that creates a class in ruby, you can find it all over the internet.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">create_class</span><span class="p">(</span><span class="n">class_name</span><span class="p">,</span> <span class="n">superclass</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">klass</span> <span class="o">=</span> <span class="no">Class</span><span class="o">.</span><span class="n">new</span> <span class="n">superclass</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span>
+</span><span class='line'>  <span class="no">Object</span><span class="o">.</span><span class="n">const_set</span> <span class="n">class_name</span><span class="o">.</span><span class="n">to_s</span><span class="p">,</span> <span class="n">klass</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Very cool, but I use this only for creating exception classes and so prefer something a bit more explicit. Luckily it is trivial to get what I want from this code.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">new_exception</span><span class="p">(</span><span class="n">exception_name</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">klass</span> <span class="o">=</span> <span class="no">Class</span><span class="o">.</span><span class="n">new</span> <span class="no">Exception</span>
+</span><span class='line'>  <span class="no">Object</span><span class="o">.</span><span class="n">const_set</span> <span class="n">exception_name</span><span class="o">.</span><span class="n">to_s</span><span class="p">,</span> <span class="n">klass</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">new_exception</span> <span class="s2">&quot;CannotFindPants&quot;</span>
+</span><span class='line'><span class="n">new_exception</span> <span class="ss">:FlobbetsAreFlumoxed</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Viola!</p>
+
+<p>If you wanted to go further, you could modify the code to take multiple arguments, loop through them to create the classes.</p>
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/02/10/shorter-exception-declarations-in-ruby/">Read on &rarr;</a>
-    </footer>
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/10/comments/">Comments</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Richard McGain</span></span>
+
+      
 
 
 
@@ -129,34 +154,32 @@
   
 
 
-<time datetime="2013-02-10T18:56:00-05:00" pubdate data-updated="true">Feb 10<span>th</span>, 2013</time>
-        
-      </p>
+<time datetime="2013-02-10T19:31:00-05:00" pubdate data-updated="true">Feb 10<span>th</span>, 2013</time>
+      
+
+
+    </p>
     
-  </header>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://richardmcgain.com/blog/2013/02/10/shorter-exception-declarations-in-ruby/" data-via="mcgain" data-counturl="http://richardmcgain.com/blog/2013/02/10/shorter-exception-declarations-in-ruby/" >Tweet</a>
+  
+  
+  
+</div>
 
-
-  <div class="entry-content"><p>Like most people, I learnt in university that commenting is essential, every method needed a big block of comments explaining each parameter, what the method does and what is returned. Inside a method, complicated lines needed comments to explain what they did etc.</p>
-
-<p>Fast forward a few years where I am one of 50 developers working on a legacy codebase with 3.5 million lines of code built up over 10 years. I often got asked by newcomers why there were few to no comments in the codebase. My opinion had changed dramatically in just a few short years. I now agreed with others in my company that code comments were unmaintainable. In our experience, existing comments were never updated by the next developer, making them inaccurate at best and dangerous at worst.</p>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/02/10/comments/" title="Previous Post: Comments">&laquo; Comments</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/02/10/comments/">Read on &rarr;</a>
-    </footer>
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section>
@@ -177,7 +200,7 @@
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/mcgain">@mcgain</a> on GitHub
@@ -207,7 +230,7 @@
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -226,6 +249,7 @@
 
   
 </aside>
+
 
     </div>
   </div>

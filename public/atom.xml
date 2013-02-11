@@ -4,7 +4,7 @@
   <title><![CDATA[Ruminations and Ramblings]]></title>
   <link href="http://richardmcgain.com/atom.xml" rel="self"/>
   <link href="http://richardmcgain.com/"/>
-  <updated>2013-02-10T19:18:05-05:00</updated>
+  <updated>2013-02-10T19:46:36-05:00</updated>
   <id>http://richardmcgain.com/</id>
   <author>
     <name><![CDATA[Richard McGain]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Shorter exception declarations in Ruby]]></title>
+    <link href="http://richardmcgain.com/blog/2013/02/10/shorter-exception-declarations-in-ruby/"/>
+    <updated>2013-02-10T19:31:00-05:00</updated>
+    <id>http://richardmcgain.com/blog/2013/02/10/shorter-exception-declarations-in-ruby</id>
+    <content type="html"><![CDATA[<p><a href="http://steveklabnik.com/">Steve Klabnik</a> recently wrote a <a href="http://blog.steveklabnik.com/posts/2012-09-09-random-ruby-tricks--class-new">post</a> on Class.new, especially as it relates to a terser syntax for declaring Exception classes.</p>
+
+<p>I use an even terser, albeit more magical syntax.</p>
+
+<!-- more -->
+
+
+<p>This is a bit of code that creates a class in ruby, you can find it all over the internet.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">create_class</span><span class="p">(</span><span class="n">class_name</span><span class="p">,</span> <span class="n">superclass</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">klass</span> <span class="o">=</span> <span class="no">Class</span><span class="o">.</span><span class="n">new</span> <span class="n">superclass</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span>
+</span><span class='line'>  <span class="no">Object</span><span class="o">.</span><span class="n">const_set</span> <span class="n">class_name</span><span class="o">.</span><span class="n">to_s</span><span class="p">,</span> <span class="n">klass</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Very cool, but I use this only for creating exception classes and so prefer something a bit more explicit. Luckily it is trivial to get what I want from this code.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">new_exception</span><span class="p">(</span><span class="n">exception_name</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">klass</span> <span class="o">=</span> <span class="no">Class</span><span class="o">.</span><span class="n">new</span> <span class="no">Exception</span>
+</span><span class='line'>  <span class="no">Object</span><span class="o">.</span><span class="n">const_set</span> <span class="n">exception_name</span><span class="o">.</span><span class="n">to_s</span><span class="p">,</span> <span class="n">klass</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">new_exception</span> <span class="s2">&quot;CannotFindPants&quot;</span>
+</span><span class='line'><span class="n">new_exception</span> <span class="ss">:FlobbetsAreFlumoxed</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Viola!</p>
+
+<p>If you wanted to go further, you could modify the code to take multiple arguments, loop through them to create the classes.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Comments]]></title>
