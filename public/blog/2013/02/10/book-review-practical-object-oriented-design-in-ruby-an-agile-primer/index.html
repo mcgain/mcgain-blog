@@ -1,0 +1,174 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic' rel='stylesheet' type='text/css'>
+	<meta charset="utf-8">
+	<title>Book Review: Practical Object-Oriented Design in Ruby: An Agile Primer - Ruminations and Ramblings</title>
+	<meta name="author" content="Richard McGain">
+
+	
+	<meta name="description" content="Although I am fairly well acquainted with the principles of Object-Oriented Design(OOD), I still yearn for a book on the subject that is great for &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Ruminations and Ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://richardmcgain.com/blog/2013/02/10/book-review-practical-object-oriented-design-in-ruby-an-agile-primer/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		document.write("<img src='http://www.gravatar.com/avatar/" + MD5("") + "?s=160' alt='Profile Picture' style='width: 160px;'");
+	</script>
+</div>
+<h1><a href="/">Ruminations and Ramblings</a></h1>
+<p class="subtitle">A blog by Richard McGain</p>
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/mcgain" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/mcgain" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+<div id="banner" class="inner">
+	<div class="container">
+		<ul class="feed"></ul>
+	</div>
+	<small><a href="http://twitter.com/mcgain">mcgain</a> @ <a href="http://twitter.com">Twitter</a></small>
+	<div class="loading">Loading...</div>
+</div>
+<script src="/javascripts/twitter.js"></script>
+<script type="text/javascript">
+	(function($){
+		$('#banner').getTwitterFeed('mcgain', 4, false);
+	})(jQuery);
+</script>
+
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post">
+	<h1 class="title">Book Review: Practical Object-Oriented Design in Ruby: An Agile Primer</h1>
+	<div class="entry-content"><p>Although I am fairly well acquainted with the principles of Object-Oriented Design(OOD), I still yearn for a book on the subject that is great for beginner and intermediate developers, a book that is considered the final word in Object-Oriented Design. <!-- more --> Such a book should be:</p>
+
+<ul>
+<li>Definitive - The book should cover a wide variety of topics.</li>
+<li>Deep - As well as covering a wide variety of subjects, a shallow treatment is just not good enough.</li>
+<li>Prescriptive - The book should have practical rules to follow.</li>
+<li>Easy to read - Some books introduce revolutionary ideas, but are hard to get through. I would classify Domain Driven Design by Eric Evans as not easy to read, conversely Test Driven Development: By Example is a great read.</li>
+<li>Reasoned - It should provide insight into the author&#8217;s reasoning, Code Complete by Steve McConnel is a great example of this.</li>
+<li>Have examples - There are many design books out there that don&#8217;t have any code. These books can be helpful, but applying the advice within can be difficult.</li>
+</ul>
+
+
+<p>Practical Object-Oriented Design in Ruby(POODR) by Sandi Metz is not that book. It does however, come closer than most other books on the subject.</p>
+
+<p>A quick look at the table of contents confirms it covers the important bits:</p>
+
+<ol>
+<li>Object-Oriented Design</li>
+<li>Designing Classes with a Single Responsibility</li>
+<li>Managing Dependencies</li>
+<li>Creating Flexible Interfaces</li>
+<li>Reducing Costs with Duck Typing</li>
+<li>Acquiring Behavior Through Inheritance</li>
+<li>Sharing Role Behavior with Modules</li>
+<li>Combining Objects with Composition</li>
+<li>Designing Cost-Effective Tests</li>
+</ol>
+
+
+<p>Do these bits live up to the ideals I outlined above?</p>
+
+<p>The first chapter gives a general overview of OOD, but as pointed out by Metz in the &#8220;How to Read This Book&#8221;, people with experience can skip this chapter. I advise you to take her advice, as it is the weakest of the set. In general though, each chapter in the book is better than the last. The chapter on Managing Dependencies has similar problems to other books covering the subject in that it advises people to inject dependencies, but does not adequately discuss the effects on the injecting classes. If a class has all it&#8217;s dependencies injected, then it is the calling classes responsibility to know about those dependencies. This is not always optimal and POODR does not properly discuss this issue and the solutions to it.</p>
+
+<p>The next few chapters do their subjects justice and, thanks to Metz&#8217;s casual and engaging writing style, have the best argument against prolific inheritance I have ever read. This is why I consider POODR to be an excellent generic OOD book, it takes all the books, blogs and arguments that have been published and summarises them perfectly.</p>
+
+<p>A special mention must be made of chapter 9. Again, the summary of the Chicago verses London schools of testing (for those not familiar with the terms, these are the mockist verses non-mockist styles of Test Driven Development) is concisely summarised. The main disadvantage of mockist testing is that the classes being mocked can be changed without the tests failing. Metz introduces a simple solution that blew my mind. This solution may not be new, but it was certainly new to me. This is exactly why I have been looking for the definitive OOD book, because there is a vast amount of knowlege out there and despite my best efforts I haven&#8217;t been able to read it all. POODR is almost a one stop book for OOD, especially for Ruby.</p>
+
+<p>So, should you buy the book? Yes is the easy answer for me. At the moment, it represents the best general OOD book on the market, let alone for Ruby and almost all developers will get something out of the book. If you are disheartened by the first few chapters don&#8217;t worry, you will not be dissapointed by the end.</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Richard McGain -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

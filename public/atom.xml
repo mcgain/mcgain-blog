@@ -4,7 +4,7 @@
   <title><![CDATA[Ruminations and Ramblings]]></title>
   <link href="http://richardmcgain.com/atom.xml" rel="self"/>
   <link href="http://richardmcgain.com/"/>
-  <updated>2013-02-10T20:27:51-05:00</updated>
+  <updated>2013-02-10T23:31:33-05:00</updated>
   <id>http://richardmcgain.com/</id>
   <author>
     <name><![CDATA[Richard McGain]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Book Review: Practical Object-Oriented Design in Ruby: An Agile Primer]]></title>
+    <link href="http://richardmcgain.com/blog/2013/02/10/book-review-practical-object-oriented-design-in-ruby-an-agile-primer/"/>
+    <updated>2013-02-10T21:08:00-05:00</updated>
+    <id>http://richardmcgain.com/blog/2013/02/10/book-review-practical-object-oriented-design-in-ruby-an-agile-primer</id>
+    <content type="html"><![CDATA[<p>Although I am fairly well acquainted with the principles of Object-Oriented Design(OOD), I still yearn for a book on the subject that is great for beginner and intermediate developers, a book that is considered the final word in Object-Oriented Design. <!-- more --> Such a book should be:</p>
+
+<ul>
+<li>Definitive - The book should cover a wide variety of topics.</li>
+<li>Deep - As well as covering a wide variety of subjects, a shallow treatment is just not good enough.</li>
+<li>Prescriptive - The book should have practical rules to follow.</li>
+<li>Easy to read - Some books introduce revolutionary ideas, but are hard to get through. I would classify Domain Driven Design by Eric Evans as not easy to read, conversely Test Driven Development: By Example is a great read.</li>
+<li>Reasoned - It should provide insight into the author&#8217;s reasoning, Code Complete by Steve McConnel is a great example of this.</li>
+<li>Have examples - There are many design books out there that don&#8217;t have any code. These books can be helpful, but applying the advice within can be difficult.</li>
+</ul>
+
+
+<p>Practical Object-Oriented Design in Ruby(POODR) by Sandi Metz is not that book. It does however, come closer than most other books on the subject.</p>
+
+<p>A quick look at the table of contents confirms it covers the important bits:</p>
+
+<ol>
+<li>Object-Oriented Design</li>
+<li>Designing Classes with a Single Responsibility</li>
+<li>Managing Dependencies</li>
+<li>Creating Flexible Interfaces</li>
+<li>Reducing Costs with Duck Typing</li>
+<li>Acquiring Behavior Through Inheritance</li>
+<li>Sharing Role Behavior with Modules</li>
+<li>Combining Objects with Composition</li>
+<li>Designing Cost-Effective Tests</li>
+</ol>
+
+
+<p>Do these bits live up to the ideals I outlined above?</p>
+
+<p>The first chapter gives a general overview of OOD, but as pointed out by Metz in the &#8220;How to Read This Book&#8221;, people with experience can skip this chapter. I advise you to take her advice, as it is the weakest of the set. In general though, each chapter in the book is better than the last. The chapter on Managing Dependencies has similar problems to other books covering the subject in that it advises people to inject dependencies, but does not adequately discuss the effects on the injecting classes. If a class has all it&#8217;s dependencies injected, then it is the calling classes responsibility to know about those dependencies. This is not always optimal and POODR does not properly discuss this issue and the solutions to it.</p>
+
+<p>The next few chapters do their subjects justice and, thanks to Metz&#8217;s casual and engaging writing style, have the best argument against prolific inheritance I have ever read. This is why I consider POODR to be an excellent generic OOD book, it takes all the books, blogs and arguments that have been published and summarises them perfectly.</p>
+
+<p>A special mention must be made of chapter 9. Again, the summary of the Chicago verses London schools of testing (for those not familiar with the terms, these are the mockist verses non-mockist styles of Test Driven Development) is concisely summarised. The main disadvantage of mockist testing is that the classes being mocked can be changed without the tests failing. Metz introduces a simple solution that blew my mind. This solution may not be new, but it was certainly new to me. This is exactly why I have been looking for the definitive OOD book, because there is a vast amount of knowlege out there and despite my best efforts I haven&#8217;t been able to read it all. POODR is almost a one stop book for OOD, especially for Ruby.</p>
+
+<p>So, should you buy the book? Yes is the easy answer for me. At the moment, it represents the best general OOD book on the market, let alone for Ruby and almost all developers will get something out of the book. If you are disheartened by the first few chapters don&#8217;t worry, you will not be dissapointed by the end.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Shorter exception declarations in Ruby]]></title>
