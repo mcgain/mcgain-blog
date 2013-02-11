@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: programming | Ruminations and Ramblings]]></title>
+  <link href="http://richardmcgain.com/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="http://richardmcgain.com/"/>
+  <updated>2013-02-10T19:18:05-05:00</updated>
+  <id>http://richardmcgain.com/</id>
+  <author>
+    <name><![CDATA[Richard McGain]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Comments]]></title>
+    <link href="http://richardmcgain.com/blog/2013/02/10/comments/"/>
+    <updated>2013-02-10T18:56:00-05:00</updated>
+    <id>http://richardmcgain.com/blog/2013/02/10/comments</id>
+    <content type="html"><![CDATA[<p>Like most people, I learnt in university that commenting is essential, every method needed a big block of comments explaining each parameter, what the method does and what is returned. Inside a method, complicated lines needed comments to explain what they did etc.</p>
+
+<p>Fast forward a few years where I am one of 50 developers working on a legacy codebase with 3.5 million lines of code built up over 10 years. I often got asked by newcomers why there were few to no comments in the codebase. My opinion had changed dramatically in just a few short years. I now agreed with others in my company that code comments were unmaintainable. In our experience, existing comments were never updated by the next developer, making them inaccurate at best and dangerous at worst.</p>
+
+<!-- more -->
+
+
+<p>I embraced the mantra espoused by many code quality books (such as <a href="http://www.amazon.com/gp/product/020161622X/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=020161622X&linkCode=as2&tag=richardmcgain-20">The Pragmatic Programmer: From Journeyman to Master</a><img src="http://www.assoc-amazon.com/e/ir?t=richardmcgain-20&l=as2&o=1&a=020161622X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+, <a href="http://www.amazon.com/gp/product/0132350882/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0132350882&linkCode=as2&tag=richardmcgain-20">Clean Code: A Handbook of Agile Software Craftsmanship</a><img src="http://www.assoc-amazon.com/e/ir?t=richardmcgain-20&l=as2&o=1&a=0132350882" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> and <a href="http://www.amazon.com/gp/product/0201485672/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0201485672&linkCode=as2&tag=richardmcgain-20">Refactoring: Improving the Design of Existing Code</a><img src="http://www.assoc-amazon.com/e/ir?t=richardmcgain-20&l=as2&o=1&a=0201485672" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />) and did an extract method refactoring on the code that the comment referred to, allowing me to remove the comment. I was fairly dogmatic about this as our codebase was heavily littered with comments. Of course there are exceptions to this rule, there are hacks, gotchas and other nasty things that creep into even the best maintained code that should be documented. In this case, at least the comments point out other code smells.</p>
+
+<p>So, I was working happily away on our codebase, refactoring constantly while working on new features. Sometimes though, moving to a better design takes time and many different steps. Some improvements I worked on in piecemeal over many months before arriving at a more elegant (and easier to maintain) design. In intermediate stages, it is not always obvious what the final plan is to other developers. When multiple people are working on the same code, they might try to refactor in the opposite direction, or undo the changes you just made. Re-enter the comment. At the top of files currently being refactored long term, I put quite a large comment explaining the changes I want to make. It is also important to note my motivations in the comment.</p>
+
+<p>The practical applications of doing this is that every so often, someone will come to chat about my plans. Instead of people working against each other, we can figure out the best approach to take together.</p>
+
+<p>It has been quite a journey for me, and I think my technique falls nicely between the two extremes.</p>
+]]></content>
+  </entry>
+  
+</feed>
