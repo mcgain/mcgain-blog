@@ -4,7 +4,7 @@
   <title><![CDATA[Ruminations and Ramblings]]></title>
   <link href="http://richardmcgain.com/atom.xml" rel="self"/>
   <link href="http://richardmcgain.com/"/>
-  <updated>2013-02-11T20:47:04-05:00</updated>
+  <updated>2013-02-11T21:40:39-05:00</updated>
   <id>http://richardmcgain.com/</id>
   <author>
     <name><![CDATA[Richard McGain]]></name>
@@ -18,7 +18,8 @@
     <link href="http://richardmcgain.com/blog/2013/02/10/book-review-practical-object-oriented-design-in-ruby-an-agile-primer/"/>
     <updated>2013-02-10T21:08:00-05:00</updated>
     <id>http://richardmcgain.com/blog/2013/02/10/book-review-practical-object-oriented-design-in-ruby-an-agile-primer</id>
-    <content type="html"><![CDATA[<p>Although I am fairly well acquainted with the principles of Object-Oriented Design(OOD), I still yearn for a book on the subject that is great for beginner and intermediate developers, a book that is considered the final word in Object-Oriented Design. <!-- more --> Such a book should be:</p>
+    <content type="html"><![CDATA[<p> <a href="http://www.amazon.com/The-Well-Grounded-Rubyist-David-Black/dp/1933988657?SubscriptionId=AKIAJTTBF5UI3YRR3DKQ&tag=richardmcgain-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1933988657">The Well-Grounded Rubyist</a>
+Although I am fairly well acquainted with the principles of Object-Oriented Design(OOD), I still yearn for a book on the subject that is great for beginner and intermediate developers, a book that is considered the final word in Object-Oriented Design. <!-- more --> Such a book should be:</p>
 
 <ul>
 <li>Definitive - The book should cover a wide variety of topics.</li>

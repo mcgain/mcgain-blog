@@ -5,7 +5,7 @@ date: 2013-02-10 21:08
 comments: true
 categories:
 ---
-
+ {{ "1933988657" | amazon_link }}
 Although I am fairly well acquainted with the principles of Object-Oriented Design(OOD), I still yearn for a book on the subject that is great for beginner and intermediate developers, a book that is considered the final word in Object-Oriented Design. <!-- more --> Such a book should be:
 
 * Definitive - The book should cover a wide variety of topics.
