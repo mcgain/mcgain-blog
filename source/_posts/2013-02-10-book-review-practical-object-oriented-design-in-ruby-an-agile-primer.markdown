@@ -5,17 +5,16 @@ date: 2013-02-10 21:08
 comments: true
 categories:
 ---
- {{ "1933988657" | amazon_link }}
 Although I am fairly well acquainted with the principles of Object-Oriented Design(OOD), I still yearn for a book on the subject that is great for beginner and intermediate developers, a book that is considered the final word in Object-Oriented Design. <!-- more --> Such a book should be:
 
 * Definitive - The book should cover a wide variety of topics.
 * Deep - As well as covering a wide variety of subjects, a shallow treatment is just not good enough.
 * Prescriptive - The book should have practical rules to follow.
-* Easy to read - Some books introduce revolutionary ideas, but are hard to get through. I would classify Domain Driven Design by Eric Evans as not easy to read, conversely Test Driven Development: By Example is a great read.
-* Reasoned - It should provide insight into the author's reasoning, Code Complete by Steve McConnel is a great example of this.
+* Easy to read - Some books introduce revolutionary ideas, but are hard to get through. I would classify {{ "0321125215" |amazon_link }} as not easy to read, conversely {{ "0321146530" |amazon_link }} is a great read.
+* Reasoned - It should provide insight into the author's reasoning, {{"0735619670" | amazon_link }} is a great example of this.
 * Have examples - There are many design books out there that don't have any code. These books can be helpful, but applying the advice within can be difficult.
 
-Practical Object-Oriented Design in Ruby(POODR) by Sandi Metz is not that book. It does however, come closer than most other books on the subject.
+{{ "0321721330" | amazon_link }}(POODR) by Sandi Metz is not that book. It does however, come closer than most other books on the subject.
 
 A quick look at the table of contents confirms it covers the important bits:
 
