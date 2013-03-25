@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ruby | Ruminations and Ramblings]]></title>
+  <link href="http://richardmcgain.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://richardmcgain.com/"/>
+  <updated>2013-03-25T10:46:23-04:00</updated>
+  <id>http://richardmcgain.com/</id>
+  <author>
+    <name><![CDATA[Richard McGain]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Compiling Vim with Ruby]]></title>
+    <link href="http://richardmcgain.com/blog/2013/03/25/compiling-vim-with-ruby/"/>
+    <updated>2013-03-25T10:42:00-04:00</updated>
+    <id>http://richardmcgain.com/blog/2013/03/25/compiling-vim-with-ruby</id>
+    <content type="html"><![CDATA[<p>A very quick one to document the vim configuration I use</p>
+
+<p>./configure --with-features=HUGE --enable-multibyte=yes --enable-cscope=yes --enable-fontset --enable-rubyinterp --with-ruby-command=/home/mcgain/.rvm/rubies/ruby-1.9.3-p286/bin/ruby</p>
+
+<p>I did hit a stumbling block with my --with-ruby-command=. This needed to be last, as it was slurping up any arguments after it, causing the ruby version check to fail.</p>
+]]></content>
+  </entry>
+  
+</feed>

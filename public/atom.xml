@@ -4,7 +4,7 @@
   <title><![CDATA[Ruminations and Ramblings]]></title>
   <link href="http://richardmcgain.com/atom.xml" rel="self"/>
   <link href="http://richardmcgain.com/"/>
-  <updated>2013-02-14T23:37:45-05:00</updated>
+  <updated>2013-03-25T10:46:23-04:00</updated>
   <id>http://richardmcgain.com/</id>
   <author>
     <name><![CDATA[Richard McGain]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Compiling Vim with Ruby]]></title>
+    <link href="http://richardmcgain.com/blog/2013/03/25/compiling-vim-with-ruby/"/>
+    <updated>2013-03-25T10:42:00-04:00</updated>
+    <id>http://richardmcgain.com/blog/2013/03/25/compiling-vim-with-ruby</id>
+    <content type="html"><![CDATA[<p>A very quick one to document the vim configuration I use</p>
+
+<p>./configure &#8211;with-features=HUGE &#8211;enable-multibyte=yes &#8211;enable-cscope=yes &#8211;enable-fontset &#8211;enable-rubyinterp &#8211;with-ruby-command=/home/mcgain/.rvm/rubies/ruby-1.9.3-p286/bin/ruby</p>
+
+<p>I did hit a stumbling block with my &#8211;with-ruby-command=. This needed to be last, as it was slurping up any arguments after it, causing the ruby version check to fail.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Book Review: Practical Object-Oriented Design in Ruby: An Agile Primer]]></title>
