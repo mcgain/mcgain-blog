@@ -2,34 +2,40 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://richardmcgain.com/blog/2013/02/10/comments/</loc>
-        <lastmod>2013-02-10T20:00:22-05:00</lastmod>
+        <lastmod>2013-08-26T12:29:26-04:00</lastmod>
     </url>
     <url>
         <loc>
             http://richardmcgain.com/blog/2013/02/10/shorter-exception-declarations-in-ruby/
         </loc>
-        <lastmod>2013-02-10T20:00:22-05:00</lastmod>
+        <lastmod>2013-08-26T12:29:26-04:00</lastmod>
     </url>
     <url>
         <loc>
             http://richardmcgain.com/blog/2013/02/10/book-review-practical-object-oriented-design-in-ruby-an-agile-primer/
         </loc>
-        <lastmod>2013-05-08T12:00:25-04:00</lastmod>
+        <lastmod>2013-08-26T12:29:26-04:00</lastmod>
     </url>
     <url>
         <loc>http://richardmcgain.com/blog/2013/03/25/compiling-vim-with-ruby/</loc>
-        <lastmod>2013-03-25T10:45:47-04:00</lastmod>
+        <lastmod>2013-08-26T12:29:26-04:00</lastmod>
     </url>
     <url>
-        <loc>http://richardmcgain.com/</loc>
-        <lastmod>2013-05-08T12:00:25-04:00</lastmod>
+        <loc>
+            http://richardmcgain.com/blog/2013/08/26/book-review-confident-ruby-by-avdi-grimm/
+        </loc>
+        <lastmod>2013-08-26T12:59:46-04:00</lastmod>
     </url>
     <url>
         <loc>http://richardmcgain.com/blog/archives/</loc>
-        <lastmod>2013-05-08T12:00:25-04:00</lastmod>
+        <lastmod>2013-08-26T12:59:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://richardmcgain.com/</loc>
+        <lastmod>2013-08-26T12:59:46-04:00</lastmod>
     </url>
     <url>
         <loc>http://richardmcgain.com/robots.txt</loc>
-        <lastmod>2013-02-10T14:31:37-05:00</lastmod>
+        <lastmod>2013-08-26T12:29:26-04:00</lastmod>
     </url>
 </urlset>
